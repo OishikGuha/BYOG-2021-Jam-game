@@ -33,8 +33,11 @@ public class PlayerMove : MonoBehaviour
         else
             yVelocity = Vector3.zero;
 
-        if (jump && controller.isGrounded)
+        if (jump && isOnGround)
+        {
             yVelocity += Vector3.up * jumpSpeed;
+            isOnGround = false;
+        }
 
         playerFinalVel = xzVelocity + yVelocity * Time.deltaTime;
         controller.Move(playerFinalVel);
