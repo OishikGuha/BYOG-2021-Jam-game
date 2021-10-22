@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     bool isOnGround;
     private void MovePlayer(Vector2 input, bool jump)
     {
-        xzVelocity = new Vector3(input.y, 0f, input.x) * moveSpeed * Time.deltaTime;
+        xzVelocity = new Vector3(input.x, 0f, input.y) * moveSpeed * Time.deltaTime;
         if (!controller.isGrounded)
             yVelocity += Vector3.down * gravity * Time.deltaTime;
         else
