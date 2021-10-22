@@ -8,8 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: testobstacle
+<<<<<<< Updated upstream
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
+=======
+  m_Shader: {fileID: 4800000, guid: 7cd5de0b884b14f88ab763ef465e1799, type: 3}
+  m_ShaderKeywords: _SEGMENTED_ON
+>>>>>>> Stashed changes
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -77,24 +82,38 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+<<<<<<< Updated upstream
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+=======
+    - _AmbientCol: 0.02
+    - _BumpScale: 1
+    - _Clipped: 0
+    - _ColBright: 0
+    - _ColIntense: 1
+>>>>>>> Stashed changes
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
+    - _Lumin: 0
+    - _MaxLight: 1
     - _Metallic: 0
+    - _MinLight: 1
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 1.1
+    - _OtlWidth: 5
     - _Parallax: 0.02
+<<<<<<< Updated upstream
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -102,14 +121,33 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+=======
+    - _Segmented: 1
+    - _ShnIntense: 0
+    - _ShnOverlap: 0
+    - _ShnRange: 0.15
+    - _ShnSmooth: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Steps: 6.01
+    - _StpSmooth: 0
+>>>>>>> Stashed changes
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+<<<<<<< Updated upstream
     - _BaseColor: {r: 0.4392157, g: 0.4745098, b: 0.54901963, a: 1}
     - _Color: {r: 0.4392157, g: 0.4745098, b: 0.54901963, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+=======
+    - _Color: {r: 0.1882353, g: 0.09411765, b: 0.3764706, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShnColor: {r: 1, g: 1, b: 0, a: 1}
+>>>>>>> Stashed changes
   m_BuildTextureStacks: []
 --- !u!114 &5637512852337596308
 MonoBehaviour:

@@ -2,15 +2,24 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float gravity = 9f;
     public float jumpSpeed = 15f;
+    public float minimumFall = -4f;
 
     [Space]
     public CharacterController controller;
+
+    Vector3 startPos;
+
+    private void Start()
+    {
+        startPos = transform.position;
+    }
 
     private void Update()
     {
@@ -36,11 +45,21 @@ public class PlayerMove : MonoBehaviour
         if (jump && controller.isGrounded)
             yVelocity += Vector3.up * jumpSpeed;
 
+        if(transform.position.y <= minimumFall)
+        {
+            Reset();
+        }
+
         playerFinalVel = xzVelocity + yVelocity * Time.deltaTime;
         controller.Move(playerFinalVel);
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         isOnGround = hit.gameObject.layer == LayerMask.NameToLayer("GroundObjects");
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
