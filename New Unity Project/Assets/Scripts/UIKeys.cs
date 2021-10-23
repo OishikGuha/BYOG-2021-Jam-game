@@ -36,22 +36,22 @@ public class UIKeys : MonoBehaviour
 
     public void KeyPresser()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             WKey.sprite = WKey_Pressed;
         else
             WKey.sprite = WKey_Idle;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             AKey.sprite = AKey_Pressed;
         else
             AKey.sprite = AKey_Idle;
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             SKey.sprite = SKey_Pressed;
         else
             SKey.sprite = SKey_Idle;
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             DKey.sprite = DKey_Pressed;
         else
             DKey.sprite = DKey_Idle;
