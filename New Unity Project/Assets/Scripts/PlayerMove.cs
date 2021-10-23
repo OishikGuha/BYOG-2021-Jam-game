@@ -45,5 +45,10 @@ public class PlayerMove : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         isOnGround = hit.gameObject.layer == LayerMask.NameToLayer("GroundObjects");
+
+        if(hit.collider.tag == "Heart")
+        {
+            PlayerHealth.instance.AddHeart(hit.collider.gameObject);
+        }
     }
 }
