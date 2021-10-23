@@ -10,6 +10,7 @@ public class UIKeys : MonoBehaviour
     public Image AKey;
     public Image SKey;
     public Image DKey;
+    public Image VKey;
 
     [Space]
     [Space]
@@ -18,6 +19,7 @@ public class UIKeys : MonoBehaviour
     public Sprite AKey_Idle;
     public Sprite SKey_Idle;
     public Sprite DKey_Idle;
+    public Sprite VKey_Idle;
 
     [Space]
 
@@ -25,6 +27,7 @@ public class UIKeys : MonoBehaviour
     public Sprite AKey_Pressed;
     public Sprite SKey_Pressed;
     public Sprite DKey_Pressed;
+    public Sprite VKey_Pressed;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +62,11 @@ public class UIKeys : MonoBehaviour
             DKey.sprite = DKey_Pressed;
         else
             DKey.sprite = DKey_Idle;
+
+        if(Input.GetKey(KeyCode.V))
+            VKey.sprite = VKey_Pressed;
+        else
+            VKey.sprite = VKey_Idle;
 
 
     }
