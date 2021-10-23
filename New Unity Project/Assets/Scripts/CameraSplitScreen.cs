@@ -20,6 +20,7 @@ public class CameraSplitScreen : MonoBehaviour
     public Image a;
     public Image s;
     public Image d;
+    public Image space;
 
     bool doSplit = false;
     private void Start()
@@ -54,6 +55,7 @@ public class CameraSplitScreen : MonoBehaviour
             a.gameObject.SetActive(true);
             s.gameObject.SetActive(true);
             d.gameObject.SetActive(true);
+            space.gameObject.SetActive(true);
         }
         else
         {
@@ -66,6 +68,7 @@ public class CameraSplitScreen : MonoBehaviour
             a.gameObject.SetActive(false);
             s.gameObject.SetActive(false);
             d.gameObject.SetActive(false);
+            space.gameObject.SetActive(false);
         }
     }
 }
