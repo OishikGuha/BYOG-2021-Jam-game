@@ -14,6 +14,12 @@ public class CameraSplitScreen : MonoBehaviour
     [SerializeField] Image splitter;
     float frontCamThickness;
     float frontCamXDis;
+    [Space]
+
+    public Image w;
+    public Image a;
+    public Image s;
+    public Image d;
 
     bool doSplit = false;
     private void Start()
@@ -43,6 +49,11 @@ public class CameraSplitScreen : MonoBehaviour
             float xPos = sideCamThickness * Screen.width;
             Vector2 splitterPos = new Vector2(xPos, splitter.rectTransform.position.y);
             splitter.rectTransform.position = splitterPos;
+
+            w.gameObject.SetActive(true);
+            a.gameObject.SetActive(true);
+            s.gameObject.SetActive(true);
+            d.gameObject.SetActive(true);
         }
         else
         {
@@ -50,6 +61,11 @@ public class CameraSplitScreen : MonoBehaviour
             sideCam.rect = new Rect(0f, 0f, 1f, 1f);
 
             splitter.gameObject.SetActive(false);
+
+            w.gameObject.SetActive(false);
+            a.gameObject.SetActive(false);
+            s.gameObject.SetActive(false);
+            d.gameObject.SetActive(false);
         }
     }
 }
